@@ -2,7 +2,7 @@ import { createReducer, on } from '@ngrx/store';
 import { GitHubUser } from '@workspace/github-users/domain';
 import * as GithubUserActions from './github-user.actions';
 
-export const githubUserFeatureKey = 'githubUser';
+export const githubUserFeatureKey = 'gitHubUser';
 
 export interface State {
   users: GitHubUser[];
