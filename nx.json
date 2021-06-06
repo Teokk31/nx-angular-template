@@ -23,7 +23,8 @@
   },
   "projects": {
     "nx-angular-template": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["root-assets", "root-styles"]
     },
     "nx-angular-template-e2e": {
       "tags": [],
