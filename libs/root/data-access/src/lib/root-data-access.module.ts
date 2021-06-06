@@ -3,14 +3,11 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '@workspace/root/environments';
-import { metaReducers, reducers } from './reducers';
 
 @NgModule({
   imports: [
     EffectsModule.forRoot([]),
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-    }),
+    StoreModule.forRoot([]),
     StoreDevtoolsModule.instrument({
       logOnly: environment.production,
       maxAge: 25,
