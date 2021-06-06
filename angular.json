@@ -59,7 +59,7 @@
                 "output": "assets"
               }
             ],
-            "styles": ["apps/nx-angular-template/src/styles.scss"],
+            "styles": ["libs/root/styles/src/index.scss"],
             "scripts": []
           },
           "configurations": {
