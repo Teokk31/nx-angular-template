@@ -23,7 +23,7 @@
       ],
       "@workspace/root/environments": [
         "libs/root/environments/src/index.ts"
-      ],
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
