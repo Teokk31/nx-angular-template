@@ -28,6 +28,9 @@
     "nx-angular-template-e2e": {
       "tags": [],
       "implicitDependencies": ["nx-angular-template"]
+    },
+    "root-assets": {
+      "tags": ["scope:root", "type:assets"]
     }
   }
 }

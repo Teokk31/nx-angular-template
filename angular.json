@@ -149,6 +149,12 @@
           }
         }
       }
+    },
+    "root-assets": {
+      "projectType": "library",
+      "root": "libs/root/assets",
+      "sourceRoot": "libs/root/assets/src",
+      "architect": {}
     }
   }
 }
