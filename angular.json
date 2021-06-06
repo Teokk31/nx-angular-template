@@ -47,10 +47,16 @@
             "polyfills": "apps/nx-angular-template/src/polyfills.ts",
             "tsConfig": "apps/nx-angular-template/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "apps/nx-angular-template/src/favicon.ico",
-              "apps/nx-angular-template/src/assets"
-            ],
+            "assets": [{
+              "glob": "favicon.ico",
+              "input": "libs/root/assets/src",
+              "output": "./"
+            },
+            {
+              "glob": "**/*",
+              "input": "libs/root/assets/src/assets",
+              "output": "assets"
+            }],
             "styles": ["apps/nx-angular-template/src/styles.scss"],
             "scripts": []
           },
