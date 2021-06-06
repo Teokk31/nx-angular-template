@@ -47,6 +47,9 @@
     },
     "github-users-data-access": {
       "tags": ["scope:github-users", "type:data-access"]
+    },
+    "github-users-feature-users": {
+      "tags": ["scope:github-users", "type:feature"]
     }
   }
 }

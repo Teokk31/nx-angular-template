@@ -22,6 +22,9 @@
       "@workspace/root/environments": ["libs/root/environments/src/index.ts"],
       "@workspace/github-users/data-access": [
         "libs/github-users/data-access/src/index.ts"
+      ],
+      "@workspace/github-users/feature-users": [
+        "libs/github-users/feature-users/src/index.ts"
       ]
     }
   },
