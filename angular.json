@@ -169,6 +169,31 @@
       "root": "libs/root/styles",
       "sourceRoot": "libs/root/styles/src",
       "architect": {}
+    },
+    "root-environments": {
+      "projectType": "library",
+      "root": "libs/root/environments",
+      "sourceRoot": "libs/root/environments/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/root/environments"],
+          "options": {
+            "jestConfig": "libs/root/environments/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/root/environments/src/**/*.ts",
+              "libs/root/environments/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   }
 }
