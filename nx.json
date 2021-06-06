@@ -31,6 +31,9 @@
     },
     "root-assets": {
       "tags": ["scope:root", "type:assets"]
+    },
+    "root-styles": {
+      "tags": ["scope:root", "type:styles"]
     }
   }
 }
