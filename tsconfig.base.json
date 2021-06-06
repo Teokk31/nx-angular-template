@@ -18,11 +18,10 @@
       "@workspace/github-users/domain": [
         "libs/github-users/domain/src/index.ts"
       ],
-      "@workspace/root/data-access": [
-        "libs/root/data-access/src/index.ts"
-      ],
-      "@workspace/root/environments": [
-        "libs/root/environments/src/index.ts"
+      "@workspace/root/data-access": ["libs/root/data-access/src/index.ts"],
+      "@workspace/root/environments": ["libs/root/environments/src/index.ts"],
+      "@workspace/github-users/data-access": [
+        "libs/github-users/data-access/src/index.ts"
       ]
     }
   },

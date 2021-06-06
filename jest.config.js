@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/libs/root/environments',
     '<rootDir>/libs/root/data-access',
     '<rootDir>/libs/github-users/domain',
+    '<rootDir>/libs/github-users/data-access',
   ],
 };

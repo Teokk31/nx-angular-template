@@ -44,6 +44,9 @@
     },
     "github-users-domain": {
       "tags": ["scope:github-users", "type:domain"]
+    },
+    "github-users-data-access": {
+      "tags": ["scope:github-users", "type:data-access"]
     }
   }
 }

@@ -245,6 +245,31 @@
           }
         }
       }
+    },
+    "github-users-data-access": {
+      "projectType": "library",
+      "root": "libs/github-users/data-access",
+      "sourceRoot": "libs/github-users/data-access/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-users/data-access"],
+          "options": {
+            "jestConfig": "libs/github-users/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-users/data-access/src/**/*.ts",
+              "libs/github-users/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   }
 }
