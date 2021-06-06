@@ -38,6 +38,9 @@
     },
     "root-environments": {
       "tags": ["scope:root", "type:environments"]
+    },
+    "root-data-access": {
+      "tags": ["scope:root", "type:data-access"]
     }
   }
 }

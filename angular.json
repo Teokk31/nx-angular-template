@@ -29,7 +29,8 @@
     },
     "@nrwl/angular:component": {
       "style": "scss"
-    }
+    },
+    "@ngrx": {}
   },
   "projects": {
     "nx-angular-template": {
@@ -190,6 +191,31 @@
             "lintFilePatterns": [
               "libs/root/environments/src/**/*.ts",
               "libs/root/environments/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "root-data-access": {
+      "projectType": "library",
+      "root": "libs/root/data-access",
+      "sourceRoot": "libs/root/data-access/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/root/data-access"],
+          "options": {
+            "jestConfig": "libs/root/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/root/data-access/src/**/*.ts",
+              "libs/root/data-access/src/**/*.html"
             ]
           }
         }
