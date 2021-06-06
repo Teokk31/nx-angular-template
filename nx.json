@@ -41,6 +41,9 @@
     },
     "root-data-access": {
       "tags": ["scope:root", "type:data-access"]
+    },
+    "github-users-domain": {
+      "tags": ["scope:github-users", "type:domain"]
     }
   }
 }

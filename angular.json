@@ -220,6 +220,31 @@
           }
         }
       }
+    },
+    "github-users-domain": {
+      "projectType": "library",
+      "root": "libs/github-users/domain",
+      "sourceRoot": "libs/github-users/domain/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-users/domain"],
+          "options": {
+            "jestConfig": "libs/github-users/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-users/domain/src/**/*.ts",
+              "libs/github-users/domain/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   }
 }
