@@ -9,7 +9,16 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'workspace-users-container',
-  templateUrl: './users-container.component.html',
+  template: `
+    <ng-container *ngFor="let user of users$ | async">
+      <div>
+        {{ user.login }}
+      </div>
+    </ng-container>
+    <ng-container *ngIf="errorMessage$ | async as errorMessage">
+      {{ errorMessage }}
+    </ng-container>
+  `,
   styleUrls: ['./users-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
