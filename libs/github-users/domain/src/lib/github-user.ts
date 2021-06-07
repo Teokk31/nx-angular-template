@@ -3,3 +3,5 @@ export interface GitHubUser {
   id: number;
   url: string;
 }
+
+export type GitHubUsers = GitHubUser[];

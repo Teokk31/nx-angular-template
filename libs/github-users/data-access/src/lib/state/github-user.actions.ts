@@ -1,11 +1,11 @@
 import { createAction, props } from '@ngrx/store';
-import { GitHubUser } from '@workspace/github-users/domain';
+import { GitHubUsers } from '@workspace/github-users/domain';
 
 export const loadGithubUsers = createAction('[GithubUser] Load GithubUsers');
 
 export const loadGithubUsersSuccess = createAction(
   '[GithubUser] Load GithubUsers Success',
-  props<{ users: GitHubUser[] }>()
+  props<{ users: GitHubUsers }>()
 );
 
 export const loadGithubUsersFailure = createAction(
