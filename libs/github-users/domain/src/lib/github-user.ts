@@ -1,7 +1,7 @@
 export interface GitHubUser {
-  login: string;
-  id: number;
-  url: string;
+  readonly login: string;
+  readonly id: number;
+  readonly url: string;
 }
 
-export type GitHubUsers = GitHubUser[];
+export type GitHubUsers = readonly GitHubUser[];

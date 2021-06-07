@@ -5,11 +5,13 @@ import * as GithubUserActions from './github-user.actions';
 export const githubUserFeatureKey = 'gitHubUser';
 
 export interface State {
-  users: GitHubUsers;
+  readonly users: GitHubUsers;
+  readonly errorMessage: string;
 }
 
 export const initialState: State = {
   users: [],
+  errorMessage: '',
 };
 
 export const reducer = createReducer(
@@ -19,6 +21,11 @@ export const reducer = createReducer(
   on(GithubUserActions.loadGithubUsersSuccess, (state, action) => ({
     ...state,
     users: action.users,
+    errorMessage: '',
   })),
-  on(GithubUserActions.loadGithubUsersFailure, (state, action) => state)
+  on(GithubUserActions.loadGithubUsersFailure, (state, action) => ({
+    ...state,
+    users: [],
+    errorMessage: action.error,
+  }))
 );

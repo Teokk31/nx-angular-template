@@ -8,6 +8,6 @@ export class GitHubUsersService {
   constructor(private httpClient: HttpClient) {}
 
   getUsers(): Observable<GitHubUsers> {
-    return this.httpClient.get<GitHubUsers>('https://api.github.com/users');
+    return this.httpClient.get<GitHubUsers>('https://api.github.com/userss');
   }
 }

@@ -9,3 +9,8 @@ export const selectAllGithubUsers = createSelector(
   selectGithubUserState,
   (state) => state.users
 );
+
+export const selectErrorMessage = createSelector(
+  selectGithubUserState,
+  (state) => state.errorMessage
+);

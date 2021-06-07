@@ -15,9 +15,14 @@ import { Observable } from 'rxjs';
 })
 export class UsersContainerComponent {
   users$: Observable<GitHubUsers>;
+  errorMessage$: Observable<string>;
 
   constructor(private store: Store) {
     this.users$ = this.store.select(GitHubUserSelectors.selectAllGithubUsers);
+    this.errorMessage$ = this.store.select(
+      GitHubUserSelectors.selectErrorMessage
+    );
+
     this.store.dispatch(GitHubUserActions.loadGithubUsers());
   }
 }

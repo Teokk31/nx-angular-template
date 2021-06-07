@@ -10,5 +10,5 @@ export const loadGithubUsersSuccess = createAction(
 
 export const loadGithubUsersFailure = createAction(
   '[GithubUser] Load GithubUsers Failure',
-  props<{ error: any }>()
+  props<{ error: string }>()
 );
