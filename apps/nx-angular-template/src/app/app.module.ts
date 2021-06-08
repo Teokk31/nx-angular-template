@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { GithubUsersFeatureUsersModule } from './../../../../libs/github-users/feature-users/src/lib/github-users-feature-users.module';
+import { GithubUsersFeatureUsersModule } from '@workspace/github-users/feature-users';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core.module';
 
