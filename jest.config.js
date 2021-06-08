@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/github-users/feature-users',
     '<rootDir>/libs/github-organization/domain',
     '<rootDir>/libs/github-organization/data-access',
+    '<rootDir>/libs/github-organization/feature-organizations',
   ],
 };

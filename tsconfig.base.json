@@ -31,6 +31,9 @@
       ],
       "@workspace/github-organization/data-access": [
         "libs/github-organization/data-access/src/index.ts"
+      ],
+      "@workspace/github-organization/feature-organizations": [
+        "libs/github-organization/feature-organizations/src/index.ts"
       ]
     }
   },

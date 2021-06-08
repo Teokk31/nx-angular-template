@@ -345,6 +345,33 @@
           }
         }
       }
+    },
+    "github-organization-feature-organizations": {
+      "projectType": "library",
+      "root": "libs/github-organization/feature-organizations",
+      "sourceRoot": "libs/github-organization/feature-organizations/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-organization/feature-organizations"
+          ],
+          "options": {
+            "jestConfig": "libs/github-organization/feature-organizations/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-organization/feature-organizations/src/**/*.ts",
+              "libs/github-organization/feature-organizations/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   }
 }
