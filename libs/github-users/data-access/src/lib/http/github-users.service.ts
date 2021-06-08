@@ -1,8 +1,9 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { GitHubUsers } from '@workspace/github-users/domain';
-import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { GitHubUser, GitHubUsers } from '@workspace/github-users/domain';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError, mergeMap } from 'rxjs/operators';
+import { GitHubUserResponses } from './../../../../domain/src/lib/github-user';
 
 @Injectable({ providedIn: 'root' })
 export class GitHubUsersService {
@@ -10,8 +11,21 @@ export class GitHubUsersService {
 
   getUsers(): Observable<GitHubUsers> {
     return this.httpClient
-      .get<GitHubUsers>('https://api.github.com/users')
+      .get<GitHubUserResponses>('https://api.github.com/users')
       .pipe(
+        mergeMap((response) =>
+          of(
+            response.map(
+              (user) =>
+                ({
+                  login: user.login,
+                  id: user.id,
+                  url: user.url,
+                  avatarUrl: user.avatar_url,
+                } as GitHubUser)
+            )
+          )
+        ),
         catchError((error: HttpErrorResponse) =>
           throwError(error.error.message)
         )
