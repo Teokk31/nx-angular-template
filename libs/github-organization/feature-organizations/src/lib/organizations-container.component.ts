@@ -10,6 +10,9 @@ import { Observable } from 'rxjs';
       <div>
         {{ organization.login }}
       </div>
+      <div>
+        <img [src]="organization.avatarUrl" [width]="150" [height]="150" />
+      </div>
     </ng-container>
     <ng-container *ngIf="errorMessage$ | async as errorMessage">
       {{ errorMessage }}
