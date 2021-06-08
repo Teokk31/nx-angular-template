@@ -50,6 +50,9 @@
     },
     "github-users-feature-users": {
       "tags": ["scope:github-users", "type:feature"]
+    },
+    "github-organization-domain": {
+      "tags": ["scope:github-organization", "type:domain"]
     }
   }
 }

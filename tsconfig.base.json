@@ -25,6 +25,9 @@
       ],
       "@workspace/github-users/feature-users": [
         "libs/github-users/feature-users/src/index.ts"
+      ],
+      "@workspace/github-organization/domain": [
+        "libs/github-organization/domain/src/index.ts"
       ]
     }
   },
