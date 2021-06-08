@@ -30,7 +30,12 @@
     "@nrwl/angular:component": {
       "style": "scss"
     },
-    "@ngrx": {}
+    "@ngrx": {},
+    "@schematics/angular:component": {
+      "changeDetection": "OnPush",
+      "flat": true,
+      "style": "scss"
+    }
   },
   "projects": {
     "nx-angular-template": {
