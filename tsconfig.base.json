@@ -28,6 +28,9 @@
       ],
       "@workspace/github-organization/domain": [
         "libs/github-organization/domain/src/index.ts"
+      ],
+      "@workspace/github-organization/data-access": [
+        "libs/github-organization/data-access/src/index.ts"
       ]
     }
   },

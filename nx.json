@@ -53,6 +53,9 @@
     },
     "github-organization-domain": {
       "tags": ["scope:github-organization", "type:domain"]
+    },
+    "github-organization-data-access": {
+      "tags": ["scope:github-organization", "type:data-access"]
     }
   }
 }

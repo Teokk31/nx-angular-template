@@ -320,6 +320,31 @@
           }
         }
       }
+    },
+    "github-organization-data-access": {
+      "projectType": "library",
+      "root": "libs/github-organization/data-access",
+      "sourceRoot": "libs/github-organization/data-access/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-organization/data-access"],
+          "options": {
+            "jestConfig": "libs/github-organization/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-organization/data-access/src/**/*.ts",
+              "libs/github-organization/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   }
 }
