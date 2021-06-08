@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {
-  GitHubUserActions,
-  GitHubUserSelectors,
+  GithubUserActions,
+  GithubUserFeature,
+  GithubUserSelectors,
 } from '@workspace/github-users/data-access';
 import { GitHubUsers } from '@workspace/github-users/domain';
 import { Observable } from 'rxjs';
@@ -26,12 +27,12 @@ export class UsersContainerComponent {
   users$: Observable<GitHubUsers>;
   errorMessage$: Observable<string>;
 
-  constructor(private store: Store) {
-    this.users$ = this.store.select(GitHubUserSelectors.selectAllGithubUsers);
+  constructor(private store: Store<GithubUserFeature.State>) {
+    this.users$ = this.store.select(GithubUserSelectors.selectAllGithubUsers);
     this.errorMessage$ = this.store.select(
-      GitHubUserSelectors.selectErrorMessage
+      GithubUserSelectors.selectErrorMessage
     );
 
-    this.store.dispatch(GitHubUserActions.loadGithubUsers());
+    this.store.dispatch(GithubUserActions.loadGithubUsers());
   }
 }

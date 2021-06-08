@@ -1,6 +1,6 @@
-import * as GitHubUserActions from './lib/state/github-user.actions';
-import * as GitHubUserFeature from './lib/state/github-user.reducer';
-import * as GitHubUserSelectors from './lib/state/github-user.selectors';
-export { GitHubUserActions, GitHubUserFeature, GitHubUserSelectors };
+import * as GithubUserActions from './lib/state/github-user.actions';
+import * as GithubUserFeature from './lib/state/github-user.reducer';
+import * as GithubUserSelectors from './lib/state/github-user.selectors';
+export { GithubUserActions, GithubUserFeature, GithubUserSelectors };
 
 export * from './lib/github-users-data-access.module';
