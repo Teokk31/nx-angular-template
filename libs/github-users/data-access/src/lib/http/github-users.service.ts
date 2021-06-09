@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { GitHubUser, GitHubUsers } from '@workspace/github-users/domain';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, mergeMap } from 'rxjs/operators';
-import { GitHubUserResponses } from './../../../../domain/src/lib/github-user';
+import { GitHubUserResponses } from '@workspace/github-users/domain';
 
 @Injectable({ providedIn: 'root' })
 export class GitHubUsersService {
