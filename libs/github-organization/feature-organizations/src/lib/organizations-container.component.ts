@@ -8,9 +8,7 @@ import { Observable } from 'rxjs';
   template: `
     <div class="container">
       <div *ngFor="let organization of organizations$ | async">
-        <a target="_blank" [href]="organization.githubUrl">
-          {{ organization.login }}
-        </a>
+        {{ organization.login }}
         <div>
           <img [src]="organization.avatarUrl" [width]="150" [height]="150" />
         </div>
