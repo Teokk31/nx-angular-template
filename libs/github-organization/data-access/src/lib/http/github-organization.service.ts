@@ -25,6 +25,7 @@ export class GitHubOrganizationService {
                   id: organization.id,
                   url: organization.url,
                   avatarUrl: organization.avatar_url,
+                  githubUrl: organization.html_url,
                 } as GitHubOrganization)
             )
           )

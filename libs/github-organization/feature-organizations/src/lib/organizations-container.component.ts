@@ -6,19 +6,28 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'workspace-organizations-container',
   template: `
-    <ng-container *ngFor="let organization of organizations$ | async">
-      <div>
-        {{ organization.login }}
+    <div class="container">
+      <div *ngFor="let organization of organizations$ | async">
+        <a target="_blank" [href]="organization.githubUrl">
+          {{ organization.login }}
+        </a>
+        <div>
+          <img [src]="organization.avatarUrl" [width]="150" [height]="150" />
+        </div>
       </div>
-      <div>
-        <img [src]="organization.avatarUrl" [width]="150" [height]="150" />
-      </div>
-    </ng-container>
+    </div>
     <ng-container *ngIf="errorMessage$ | async as errorMessage">
       {{ errorMessage }}
     </ng-container>
   `,
-  styleUrls: ['./organizations-container.component.scss'],
+  styles: [
+    `
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    `,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   viewProviders: [GitHubOrganizationStore],
 })

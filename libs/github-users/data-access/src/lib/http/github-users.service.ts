@@ -22,6 +22,7 @@ export class GitHubUsersService {
                   id: user.id,
                   url: user.url,
                   avatarUrl: user.avatar_url,
+                  githubUrl: user.html_url,
                 } as GitHubUser)
             )
           )

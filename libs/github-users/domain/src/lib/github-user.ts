@@ -26,6 +26,7 @@ export interface GitHubUser {
   readonly id: number;
   readonly url: string;
   readonly avatarUrl: string;
+  readonly githubUrl: string;
 }
 
 export type GitHubUsers = readonly GitHubUser[];

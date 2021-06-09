@@ -26,6 +26,7 @@ export interface GitHubOrganization {
   readonly id: number;
   readonly url: string;
   readonly avatarUrl: string;
+  readonly githubUrl: string;
 }
 
 export type GitHubOrganizations = readonly GitHubOrganization[];

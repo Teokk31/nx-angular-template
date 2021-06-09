@@ -11,19 +11,28 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'workspace-users-container',
   template: `
-    <ng-container *ngFor="let user of users$ | async">
-      <div>
-        {{ user.login }}
+    <div class="container">
+      <div *ngFor="let user of users$ | async">
+        <a target="_blank" [href]="user.githubUrl">
+          {{ user.login }}
+        </a>
+        <div>
+          <img [src]="user.avatarUrl" [width]="150" [height]="150" />
+        </div>
       </div>
-      <div>
-        <img [src]="user.avatarUrl" [width]="150" [height]="150" />
-      </div>
-    </ng-container>
+    </div>
     <ng-container *ngIf="errorMessage$ | async as errorMessage">
       {{ errorMessage }}
     </ng-container>
   `,
-  styleUrls: ['./users-container.component.scss'],
+  styles: [
+    `
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    `,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UsersContainerComponent {
