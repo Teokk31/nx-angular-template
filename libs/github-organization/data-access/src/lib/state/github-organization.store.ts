@@ -17,10 +17,10 @@ const initialState: GitHubOrganizationState = {
 
 @Injectable()
 export class GitHubOrganizationStore extends ComponentStore<GitHubOrganizationState> {
-  organizations$: Observable<GitHubOrganizations> = this.select(
+  readonly organizations$: Observable<GitHubOrganizations> = this.select(
     (state) => state.organizations
   );
-  errorMessage$: Observable<string> = this.select(
+  readonly errorMessage$: Observable<string> = this.select(
     (state) => state.errorMessage
   );
 
@@ -30,7 +30,7 @@ export class GitHubOrganizationStore extends ComponentStore<GitHubOrganizationSt
     this.queryOrganizations();
   }
 
-  private queryOrganizations = this.effect<void>((_$) => {
+  private readonly queryOrganizations = this.effect<void>((_$) => {
     return _$.pipe(
       mergeMap(() =>
         this.gitHubOrganizationService.getOrganizations().pipe(
@@ -43,7 +43,7 @@ export class GitHubOrganizationStore extends ComponentStore<GitHubOrganizationSt
     );
   });
 
-  private updateOrganizations = this.updater<GitHubOrganizations>(
+  private readonly updateOrganizations = this.updater<GitHubOrganizations>(
     (state, response) => ({
       ...state,
       organizations: response,
@@ -51,9 +51,11 @@ export class GitHubOrganizationStore extends ComponentStore<GitHubOrganizationSt
     })
   );
 
-  private updateErrorMessage = this.updater<string>((state, response) => ({
-    ...state,
-    organizations: [],
-    errorMessage: response,
-  }));
+  private readonly updateErrorMessage = this.updater<string>(
+    (state, response) => ({
+      ...state,
+      organizations: [],
+      errorMessage: response,
+    })
+  );
 }
