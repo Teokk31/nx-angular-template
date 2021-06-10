@@ -18,10 +18,12 @@ const initialState: GitHubOrganizationState = {
 @Injectable()
 export class GitHubOrganizationStore extends ComponentStore<GitHubOrganizationState> {
   readonly organizations$: Observable<GitHubOrganizations> = this.select(
-    (state) => state.organizations
+    (state) => state.organizations,
+    { debounce: true }
   );
   readonly errorMessage$: Observable<string> = this.select(
-    (state) => state.errorMessage
+    (state) => state.errorMessage,
+    { debounce: true }
   );
 
   constructor(private gitHubOrganizationService: GitHubOrganizationService) {
