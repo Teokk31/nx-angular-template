@@ -15,26 +15,26 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@workspace/github-users/domain": [
-        "libs/github-users/domain/src/index.ts"
-      ],
-      "@workspace/root/data-access": ["libs/root/data-access/src/index.ts"],
-      "@workspace/root/environments": ["libs/root/environments/src/index.ts"],
-      "@workspace/github-users/data-access": [
-        "libs/github-users/data-access/src/index.ts"
-      ],
-      "@workspace/github-users/feature-users": [
-        "libs/github-users/feature-users/src/index.ts"
+      "@workspace/github-organization/data-access": [
+        "libs/github-organization/data-access/src/index.ts"
       ],
       "@workspace/github-organization/domain": [
         "libs/github-organization/domain/src/index.ts"
       ],
-      "@workspace/github-organization/data-access": [
-        "libs/github-organization/data-access/src/index.ts"
-      ],
       "@workspace/github-organization/feature-organizations": [
         "libs/github-organization/feature-organizations/src/index.ts"
-      ]
+      ],
+      "@workspace/github-users/data-access": [
+        "libs/github-users/data-access/src/index.ts"
+      ],
+      "@workspace/github-users/domain": [
+        "libs/github-users/domain/src/index.ts"
+      ],
+      "@workspace/github-users/feature-users": [
+        "libs/github-users/feature-users/src/index.ts"
+      ],
+      "@workspace/root/data-access": ["libs/root/data-access/src/index.ts"],
+      "@workspace/root/environments": ["libs/root/environments/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

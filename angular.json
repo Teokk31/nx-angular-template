@@ -38,6 +38,158 @@
     }
   },
   "projects": {
+    "github-organization-data-access": {
+      "projectType": "library",
+      "root": "libs/github-organization/data-access",
+      "sourceRoot": "libs/github-organization/data-access/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-organization/data-access"],
+          "options": {
+            "jestConfig": "libs/github-organization/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-organization/data-access/src/**/*.ts",
+              "libs/github-organization/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "github-organization-domain": {
+      "projectType": "library",
+      "root": "libs/github-organization/domain",
+      "sourceRoot": "libs/github-organization/domain/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-organization/domain"],
+          "options": {
+            "jestConfig": "libs/github-organization/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-organization/domain/src/**/*.ts",
+              "libs/github-organization/domain/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "github-organization-feature-organizations": {
+      "projectType": "library",
+      "root": "libs/github-organization/feature-organizations",
+      "sourceRoot": "libs/github-organization/feature-organizations/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-organization/feature-organizations"
+          ],
+          "options": {
+            "jestConfig": "libs/github-organization/feature-organizations/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-organization/feature-organizations/src/**/*.ts",
+              "libs/github-organization/feature-organizations/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "github-users-data-access": {
+      "projectType": "library",
+      "root": "libs/github-users/data-access",
+      "sourceRoot": "libs/github-users/data-access/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-users/data-access"],
+          "options": {
+            "jestConfig": "libs/github-users/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-users/data-access/src/**/*.ts",
+              "libs/github-users/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "github-users-domain": {
+      "projectType": "library",
+      "root": "libs/github-users/domain",
+      "sourceRoot": "libs/github-users/domain/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-users/domain"],
+          "options": {
+            "jestConfig": "libs/github-users/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-users/domain/src/**/*.ts",
+              "libs/github-users/domain/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "github-users-feature-users": {
+      "projectType": "library",
+      "root": "libs/github-users/feature-users",
+      "sourceRoot": "libs/github-users/feature-users/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-users/feature-users"],
+          "options": {
+            "jestConfig": "libs/github-users/feature-users/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-users/feature-users/src/**/*.ts",
+              "libs/github-users/feature-users/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "nx-angular-template": {
       "projectType": "application",
       "root": "apps/nx-angular-template",
@@ -170,11 +322,30 @@
       "sourceRoot": "libs/root/assets/src",
       "architect": {}
     },
-    "root-styles": {
+    "root-data-access": {
       "projectType": "library",
-      "root": "libs/root/styles",
-      "sourceRoot": "libs/root/styles/src",
-      "architect": {}
+      "root": "libs/root/data-access",
+      "sourceRoot": "libs/root/data-access/src",
+      "prefix": "workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/root/data-access"],
+          "options": {
+            "jestConfig": "libs/root/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/root/data-access/src/**/*.ts",
+              "libs/root/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
     },
     "root-environments": {
       "projectType": "library",
@@ -201,182 +372,11 @@
         }
       }
     },
-    "root-data-access": {
+    "root-styles": {
       "projectType": "library",
-      "root": "libs/root/data-access",
-      "sourceRoot": "libs/root/data-access/src",
-      "prefix": "workspace",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/root/data-access"],
-          "options": {
-            "jestConfig": "libs/root/data-access/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/root/data-access/src/**/*.ts",
-              "libs/root/data-access/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "github-users-domain": {
-      "projectType": "library",
-      "root": "libs/github-users/domain",
-      "sourceRoot": "libs/github-users/domain/src",
-      "prefix": "workspace",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-users/domain"],
-          "options": {
-            "jestConfig": "libs/github-users/domain/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-users/domain/src/**/*.ts",
-              "libs/github-users/domain/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "github-users-data-access": {
-      "projectType": "library",
-      "root": "libs/github-users/data-access",
-      "sourceRoot": "libs/github-users/data-access/src",
-      "prefix": "workspace",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-users/data-access"],
-          "options": {
-            "jestConfig": "libs/github-users/data-access/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-users/data-access/src/**/*.ts",
-              "libs/github-users/data-access/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "github-users-feature-users": {
-      "projectType": "library",
-      "root": "libs/github-users/feature-users",
-      "sourceRoot": "libs/github-users/feature-users/src",
-      "prefix": "workspace",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-users/feature-users"],
-          "options": {
-            "jestConfig": "libs/github-users/feature-users/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-users/feature-users/src/**/*.ts",
-              "libs/github-users/feature-users/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "github-organization-domain": {
-      "projectType": "library",
-      "root": "libs/github-organization/domain",
-      "sourceRoot": "libs/github-organization/domain/src",
-      "prefix": "workspace",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-organization/domain"],
-          "options": {
-            "jestConfig": "libs/github-organization/domain/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-organization/domain/src/**/*.ts",
-              "libs/github-organization/domain/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "github-organization-data-access": {
-      "projectType": "library",
-      "root": "libs/github-organization/data-access",
-      "sourceRoot": "libs/github-organization/data-access/src",
-      "prefix": "workspace",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-organization/data-access"],
-          "options": {
-            "jestConfig": "libs/github-organization/data-access/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-organization/data-access/src/**/*.ts",
-              "libs/github-organization/data-access/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "github-organization-feature-organizations": {
-      "projectType": "library",
-      "root": "libs/github-organization/feature-organizations",
-      "sourceRoot": "libs/github-organization/feature-organizations/src",
-      "prefix": "workspace",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/github-organization/feature-organizations"
-          ],
-          "options": {
-            "jestConfig": "libs/github-organization/feature-organizations/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-organization/feature-organizations/src/**/*.ts",
-              "libs/github-organization/feature-organizations/src/**/*.html"
-            ]
-          }
-        }
-      }
+      "root": "libs/root/styles",
+      "sourceRoot": "libs/root/styles/src",
+      "architect": {}
     }
   }
 }

@@ -22,6 +22,24 @@
     }
   },
   "projects": {
+    "github-organization-data-access": {
+      "tags": ["scope:github-organization", "type:data-access"]
+    },
+    "github-organization-domain": {
+      "tags": ["scope:github-organization", "type:domain"]
+    },
+    "github-organization-feature-organizations": {
+      "tags": ["scope:github-organization", "type:feature"]
+    },
+    "github-users-data-access": {
+      "tags": ["scope:github-users", "type:data-access"]
+    },
+    "github-users-domain": {
+      "tags": ["scope:github-users", "type:domain"]
+    },
+    "github-users-feature-users": {
+      "tags": ["scope:github-users", "type:feature"]
+    },
     "nx-angular-template": {
       "tags": [],
       "implicitDependencies": ["root-assets", "root-styles"]
@@ -33,32 +51,14 @@
     "root-assets": {
       "tags": ["scope:root", "type:assets"]
     },
-    "root-styles": {
-      "tags": ["scope:root", "type:styles"]
+    "root-data-access": {
+      "tags": ["scope:root", "type:data-access"]
     },
     "root-environments": {
       "tags": ["scope:root", "type:environments"]
     },
-    "root-data-access": {
-      "tags": ["scope:root", "type:data-access"]
-    },
-    "github-users-domain": {
-      "tags": ["scope:github-users", "type:domain"]
-    },
-    "github-users-data-access": {
-      "tags": ["scope:github-users", "type:data-access"]
-    },
-    "github-users-feature-users": {
-      "tags": ["scope:github-users", "type:feature"]
-    },
-    "github-organization-domain": {
-      "tags": ["scope:github-organization", "type:domain"]
-    },
-    "github-organization-data-access": {
-      "tags": ["scope:github-organization", "type:data-access"]
-    },
-    "github-organization-feature-organizations": {
-      "tags": ["scope:github-organization", "type:feature"]
+    "root-styles": {
+      "tags": ["scope:root", "type:styles"]
     }
   }
 }
