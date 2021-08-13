@@ -20,62 +20,11 @@
 
 ## Angular Style Guide
 
-It is always recommended to check the official [Angular style guide](https://angular.io/guide/styleguide) by Angular team, whenever having any doubt.
+It is always recommended to check the official [Angular Style Guide](https://angular.io/guide/styleguide) by Angular team, whenever having any doubt.
 
 ## Angular CLI
 
-It is recommended to utilise the Angular CLI whenever it is possible to initialise, develop, scaffold.
-
-### Installation
-
-```
-npm install -g @angular/cli
-```
-
-### Generate New Application
-
-```
-ng generate new <project-name>
-```
-
-### Generate Angular Item
-
-```
-ng generate component <name>
-ng g c <name>
-```
-
-### Build and Serves Angular Project
-
-```
-ng serve
-ng s
-```
-
-### Build Angular Project
-
-```
-ng build
-ng b
-```
-
-> 📝 Note: starts from version 12, `ng build` now defaults to production build.
-
-To build production target project:
-
-```
-`ng build --configuration production`
-```
-
-> 📝 Note: starts from version 12, `ng build --config prod` has been deprecated.
-
-### Update Angular Project
-
-```
-ng update
-```
-
-> 💡 Tip: `ng --help` lists available commands and their short descriptions.
+It is recommended to utilise the [Angular CLI](https://angular.io/cli) whenever it is possible to initialise, develop, scaffold.
 
 ## Angular Strict Mode
 
