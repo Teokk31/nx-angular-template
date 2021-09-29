@@ -411,8 +411,8 @@ Container component can be think of it is like shipping containers:
 
 - Present application state to the user.
 - Change application state triggered by user interaction.
-- Have `@Input` properties for supplying them with data which will be formatted for display.
-- Use `@Output` properties to notify application state changes initiated by user interactions.
+- Have `@Input()` decorator for supplying them with data which will be formatted for display.
+- Use `@Output()` decorator to notify application state changes initiated by user interactions.
 - Apply the `OnPush` change detection strategy.
 - Usually reusable.
 - No side effects.
